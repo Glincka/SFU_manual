@@ -1,0 +1,550 @@
+% стилевой пакет для написания диссертации в Latex для учебных пособий СФУ
+% автор к.ф.-м.н., доцент Семенова Дарья Владиславовна, DVSemenova@sfu-kras.ru
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+% шрифты
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc} %кодировки
+\usepackage[T2A]{fontenc} %кодировки
+\usepackage[english,russian]{babel} 
+\usepackage{fancyhdr}
+\usepackage{bookmark}
+
+%\LdfInit{russian}{captionsrussian}
+%\cyrillicencoding
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{amsmath,amstext,amsfonts,amssymb,amsthm, mathrsfs}
+\usepackage{float}
+\usepackage[ruled]{algorithm}
+\usepackage{mathtools}
+\usepackage{systeme}
+
+\usepackage[mathscr]{eucal}
+\usepackage{indentfirst}
+\usepackage{flafter}
+\usepackage{cite}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tocloft}
+\usetikzlibrary{calc}
+\usepackage{geometry, fancyhdr}
+
+%\Requirepackage{slashbox}
+\usepackage{esvect}
+\usepackage{hhline}
+\usepackage{xcolor, colortbl}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{multirow}
+\usepackage{forest}
+\usetikzlibrary{calc}
+\usepackage{makeidx}
+\makeindex
+
+\usetikzlibrary{arrows,arrows.meta,shapes,positioning,shadows,trees}
+\usetikzlibrary{decorations, calc,decorations.markings, decorations.pathreplacing,intersections}
+\usetikzlibrary{chains,fit,shapes, patterns}
+\usetikzlibrary{tikzmark}
+
+
+
+\usetikzlibrary{decorations}
+\usepackage{pgf}
+\usepackage{pgfplots}
+
+\usetikzlibrary{decorations, calc,math}
+\usetikzlibrary{chains,fit,shapes}
+\pgfplotsset{compat=newest}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+% шрифты
+
+\usepackage{textcomp} % стилевой пакет textcomp, открывающий доступ к большому числу типографских значков
+%математические шрифты и оформления
+\usepackage{amsmath, amssymb}%, mathrsfs} 
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
+%\usepackage{mathtext} % Русские буквы в формулах
+\usepackage[mathscr]{eucal}
+
+%---------------Times New Roman in XeLaTeX-------------------------
+\iffalse
+\usepackage{fontspec} 
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} 
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+\fi
+%-------------------------------------------------------
+%\usepackage{newtxtext,newtxmath} %----Вариант, но без Sans
+
+%----------------Нет поддержки русских символов в формулах--------------------
+\usepackage{tempora}                        % Times New Roman for text
+%\usepackage[bigdelims,vvarbb]{newpxmath}    % math italic letters from Nimbus Roman
+%\usepackage[cal=boondoxo]{mathalfa}         % mathcal from STIX, unslanted a bit
+%------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% оформление текста
+\usepackage{lscape} % разворот страницы
+\usepackage{indentfirst}% отделять первую строку раздела абзацным отступом тоже
+\usepackage{geometry} % настройка параметров страницы
+\usepackage[normalem]{ulem} % подчеркивания
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Пакеты для красивых таблиц в LaTeX
+% почитать можно здесь http://mydebianblog.blogspot.ru/2013/01/advanced-tables-in-latex.html
+\usepackage{booktabs} % Книжные таблицы  
+\usepackage{array} % таблицы 
+\usepackage{longtable} % многостраничные таблицы
+\usepackage{tabularx} % стоит использовать для создания больших и сложных таблиц с разделением по страницам, с кучей текста в ячейках
+\usepackage{multirow} % улучшенное форматирование таблиц
+\usepackage{color,colortbl} % цветные таблицы
+%\usepackage[leftcaption]{sidecap} % Пакет sidecap[18] предлагает окружения флотов SCfigure и SCtable, которые являются теми же рисунками и таблицами, но подписи помещаются сбоку содержимого.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+% Графические пакеты 
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+%\usepgfplotslibrary{intersection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% заголовки
+%\usepackage{topcapt}
+\usepackage{caption}
+\usepackage{titletoc} % продвинутые заголовки 
+\usepackage{tocloft} % оформление оглавлений 
+\usepackage{float} %плавающие объекты
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%навигация 
+\usepackage{makeidx} %предметный указатель
+\makeindex
+\usepackage{multicol}
+%гиперссылки
+\usepackage{hyperref}
+\hypersetup{unicode, colorlinks, linkcolor=black, citecolor=black, urlcolor=black,  pdfhighlight=/O}
+%[unicode, colorlinks, linkcolor=black, citecolor=black, urlcolor=black, pdftex, pdfhighlight=/O]
+% для печати надо linkcolor=black
+%\usepackage{cite}% управление библиографией
+%\usepackage{wrapfig}% обтекание фигуры текстом
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+% алгоритмы на псевдокоде
+\usepackage{algorithmicx}
+\usepackage[ruled]{algorithm}
+\usepackage{ifthen} %простейшие средства программирования 
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{textcase} 
+\usepackage{epigraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{setspace} %указания межстрочного интервала для всего документа или блока
+\usepackage{rotating}
+\usepackage{bchart}
+
+\usetikzlibrary{shapes}
+%\renewcommand{\baselinestretch}{1.23}
+\def\No{\textnumero}
+
+%\newcommand{\zz}{\rule{4mm}{.6pt}}
+
+\makeatletter
+
+%\DeclareOption{a4paper}
+   {\setlength\paperheight {297mm}%
+    \setlength\paperwidth  {210mm}}
+		
+
+
+\geometry{top=3cm}
+\geometry{bottom=2.7cm}
+\geometry{left=2.5cm}
+\geometry{right=2.5cm}
+
+\setlength{\parindent}{1.25cm}
+\linespread{1.3}
+		
+		%\def\ps@headings{%
+    %\let\@oddfoot\@empty
+    %\def\@oddhead{\hfil \thepage \hfil}%
+    %}
+		
+\renewcommand{\@oddhead}{}
+\renewcommand{\@oddfoot}{}
+\renewcommand{\@evenhead}{}
+\renewcommand{\@evenfoot}{}
+
+\numberwithin{equation}{chapter}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setcounter{secnumdepth}{2}
+
+
+\renewcommand{\labelitemi}{--}
+
+\setlength\lineskip{1\p@}
+\setlength\normallineskip{1\p@}
+\renewcommand\baselinestretch{1.2}
+\setlength\parskip{0\p@ \@plus \p@}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlist{nolistsep, parsep=0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Таблицы по другому
+\usepackage{caption}
+\DeclareCaptionLabelFormat{rightline}{\rightline{\bothIfFirst{#1}{ }#2}}
+\captionsetup[table]{labelformat=rightline, labelsep=newline, justification=centering}
+
+\captionsetup[figure]{format=plain,labelsep=period}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec, blindtext, color}
+%\definecolor{gray75}{gray}{0.75}
+%\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{\chapter}[hang]{\huge\bfseries}{????? \thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\huge\bfseries}
+
+\titleformat{\chapter}[display]
+{\hyphenpenalty=10000\normalfont\filcenter\bfseries}
+{\Huge\MakeUppercase{\chaptertitlename~\thechapter}}
+{1pc}
+{\titlerule
+\vspace{1pt}%
+\titlerule[2pt]
+\huge}
+
+\newcommand{\helv}{\fontseries{}\fontsize{14}{14}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+
+\def\ps@headings{\let\@mkboth\markboth
+ \def\@oddfoot{}\def\@evenfoot{}%       No feet.
+ \def\@evenhead{}%        Left heading.
+ \def\@oddhead{}% Right heading
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+\titlecontents{chapter}
+[0pt]
+{\addvspace{1pc}%
+}%
+{\hspace{2.31cm}\contentsmargin{0em}%
+\bfseries
+\makebox[0pt][r]{{\textcolor{black}{\chaptername~\thecontentslabel.}}
+\enspace}%
+\bfseries %\large
+}
+{\bfseries\contentsmargin{0em}%
+%\large
+}
+{\titlerule*[1pc]{.}\contentspage}
+[\addvspace{.5pc}]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+
+\titleformat*{\section}{\sloppy\righthyphenmin62\bf\large}
+
+\titleformat*{\subsection}{\sloppy\righthyphenmin62}
+
+\titleformat*{\subsubsection}{\sloppy\righthyphenmin62\it}
+
+
+\fancypagestyle{plain}{ 
+    \fancyhf{}
+		\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+   %\fancyfoot[LE,RO]{\helv \thepage}
+	}
+
+	\renewcommand*{\sectionmark}[1]{\markright{\uppercase{#1}}}
+   \renewcommand*{\chaptermark}[1]{\markboth{#1}{} }%
+\fancypagestyle{fancy}{
+
+		
+	\fancyfoot{}
+	\setlength{\headheight}{17pt}
+   %\fancyhead[CE]{\helv\nouppercase\leftmark}
+	%	\fancyhead[CO]{\helv\nouppercase\rightmark}
+	\fancyhead[LE]{\helv\thepage}%
+	\fancyhead[RO]{\helv\thepage}%
+	\fancyhead[RE]{\itshape\nouppercase{\leftmark}}
+	\fancyhead[LO]{\itshape\nouppercase{\rightmark}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+\fancypagestyle{myfancy}{%
+   \fancyhead{} 
+	 \fancyfoot{}% на обычных страницах убираем колонтитулы
+   \renewcommand{\headrulewidth}{0pt} % и линейку
+	%\fancyhead[RE,LO]{\helv \thepage}
+	%\fancyhead[RE,LO]{\helv \thepage}
+}
+
+
+\renewcommand\chapter{\clearpage{\thispagestyle{myfancy}}
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter
+										}
+										
+										
+\renewcommand\tableofcontents{%
+\chapter*{\contentsname}
+		\@mkboth{\helv\chaptername~}{}%
+	    \@starttoc{toc}%
+     %\clearpage{\thispagestyle{myfancy}}\chapter*{\contentsname}%
+  %\begin{flushright}  \contentsdesc\end{flushright}%
+	 %         \@starttoc{toc}%
+}%flushright
+
+\fancypagestyle{plain}{ 
+    \fancyhf{}
+		\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+   %\fancyfoot[LE,RO]{\helv \thepage}
+	}
+		
+		\tocloftpagestyle{myfancy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\pagestyle{fancy}
+		%\renewcommand*{\sectionmark}[1]{\markright{\thesection\ ##1}}
+
+\iffalse
+\fancypagestyle{fancybook}{%
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
+    \fancyhf{}%
+    % Note the ## here. It's required because \fancypagestyle is making a macro (\ps@fancybook).
+    % If we just wrote #1, TeX would think that it's the argument to \ps@fancybook, but
+    % \ps@fancybook doesn't take any arguments, so TeX would complain with an error message.
+    % You are not expected to understand this.
+		%\renewcommand*{\sectionmark}[1]{\markright{\thesection\ ##1} }%
+		\renewcommand*{\sectionmark}[1]{\markright{\thesection\ ##1}}
+    \renewcommand*{\chaptermark}[1]{\markleft{\chaptername\space\thechapter.\space ##1}{} }%
+		%\renewcommand*{\chaptermark}[1]{ \helv\nouppercase\markboth{\chaptername: ##1}{} }%
+    % Increase the length of the header such that the folios 
+    % (typography jargon for page numbers) move into the margin
+    %\fancyhfoffset[LE]{6mm}% slightly less than 0.25in
+    %\fancyhfoffset[RO]{6mm}%
+    % Put some space and a vertical bar between the folio and the rest of the header
+		
+		\fancyhead[CE]{\helv\nouppercase\leftmark}
+		\fancyhead[CO]{\helv\nouppercase\rightmark}
+		
+    %\fancyhead[LE]{\thepage\hskip3mm\hskip3mm\nouppercase\leftmark}%
+    %\fancyhead[RO]{\nouppercase\rightmark\hskip3mm\hskip3mm\thepage}%
+		\fancyhead[LE]{\helv\nouppercase\thepage}%
+		\fancyhead[RO]{\helv\nouppercase\thepage}%
+    %\fancyhead[RO]{\nouppercase\rightmark\hskip3mm\hskip3mm\thepage}
+}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\renewcommand\indexname{Указатель обозначений}
+\renewenvironment*{theindex}{
+\columnseprule=0pt\columnsep=35pt
+\parindent=0pt
+\setlength{\parskip}{0pt plus .3pt}
+\let\item=\@idxitem
+\thispagestyle{myfancy}
+\chapter*{\indexname}
+\addcontentsline{toc}{chapter}{\indexname}
+\markright{\indexname}
+\vspace*{-1.2cm}
+\begin{multicols}{1}
+\raggedbottom
+\end{multicols}}
+
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% ?????? ?????????? ????? ?????
+\renewcommand{\@biblabel}[1]{#1.} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% список литературы через точку
+\renewcommand{\@biblabel}[1]{#1.} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Русский псевдокод
+
+\captionsetup[ruled]{labelsep=period}
+\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}%
+
+\floatname{algorithm}{Алгоритм}
+\algrenewcommand\algorithmicrequire{\textbf{Вход: }}
+\algrenewcommand\algorithmicensure{\textbf{Выход: }}
+\algrenewcommand\algorithmicwhile{\textbf{До тех пор пока}}
+	\algrenewcommand\algorithmicdo{\textbf{выполнять}}
+	\algrenewcommand\algorithmicrepeat{\textbf{Повторять}}
+	\algrenewcommand\algorithmicuntil{\textbf{Пока выполняется}}
+	\algrenewcommand\algorithmicend{\textbf{Конец}}
+	\algrenewcommand\algorithmicif{\textbf{Если}}
+	\algrenewcommand\algorithmicelse{\textbf{иначе}}
+	\algrenewcommand\algorithmicthen{\textbf{тогда}}
+	\algrenewcommand\algorithmicfor{\textbf{Для}}
+	\algrenewcommand\algorithmicforall{\textbf{Выполнить для всех}}
+	\algrenewcommand\algorithmicfunction{\textbf{Функция}}
+	\algrenewcommand\algorithmicprocedure{\textbf{Процедура}}
+	\algrenewcommand\algorithmicloop{\textbf{Зациклить}}
+	\algrenewcommand\algorithmicreturn{\textbf{Возвратить}}
+	\algrenewtext{EndWhile}{\textbf{Конец цикла}}
+	\algrenewtext{EndLoop}{\textbf{Конец зацикливания}}
+	\algrenewtext{EndFor}{\textbf{Конец цикла}}
+	\algrenewtext{EndFunction}{\textbf{Конец функции}}
+	\algrenewtext{EndProcedure}{\textbf{Конец процедуры}}
+	\algrenewtext{EndIf}{\textbf{Конец условия}}
+	\algrenewtext{EndFor}{\textbf{Конец цикла}}
+	\algrenewtext{BeginAlgorithm}{\textbf{Начало алгоритма}}
+	\algrenewtext{EndAlgorithm}{\textbf{Конец алгоритма}}
+	\algrenewtext{BeginBlock}{\textbf{Начало блока. }}
+	\algrenewtext{EndBlock}{\textbf{Конец блока}}
+	\algrenewtext{ElsIf}{\textbf{иначе если }}
+		
+\algloop{description}
+	\algnewcommand\algorithmicdescription{\textbf{Описание алгоритма}}
+\renewcommand{\listalgorithmname}{Список алгоритмов}
+%\renewcommand{\@biblabel}[1]{#1.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55555
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% заголовки окружений
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{\indent Tеорема}[chapter]
+\newtheorem{Lemma}{\indent Лемма}[chapter]
+\newtheorem{state}{\indent Утверждение}[chapter]
+
+
+\newenvironment{Proof}{\indent \textit{Доказательство.}}{\hfill$\square$}
+
+\theoremstyle{definition}
+\newtheorem{defin}{\indent  Определение}[chapter]
+\newtheorem{task}{Задача}[chapter]
+%\newtheorem{Remark}{\indent Замечание}[chapter]
+\newcounter{Remark}[chapter]
+\def\theRemark{\arabic{chapter}.\arabic{Remark}}
+\newenvironment{Remark}[1][]{\refstepcounter{Remark}\par\medskip
+   \indent \textsc{Замечание~\theRemark. #1} \rmfamily}{}%\hfill$\scriptstyle\lozenge$\
+	\newcommand\solution{\indent \textit{Решение. }}
+	
+	\newcommand{\textmy}[1]{\textrm{#1}}
+	
+\newtheorem{property}{\indent  Свойство}[chapter]
+
+\newtheorem{Proposition}{\indent Предложение}[chapter]
+\newtheorem{Corollary}{\indent Следствие}[chapter]
+\newcounter{Example}[chapter]
+\def\theExample{\arabic{chapter}.\arabic{Example}}
+
+\newenvironment{Example}[1][]{\refstepcounter{Example}\par\medskip
+   \indent \textsc{Пример~\theExample. #1} \rmfamily }{\hfill$\scriptstyle\Box$\ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newcommand\Inn{%
+  \mathrel{\mathchoice
+    {\ooalign{$\displaystyle\subset$\cr\hfil\scalebox{0.8}[1]{$=$}\hfil\cr}}%
+    {\ooalign{$\textstyle\subset$\cr\hfil\scalebox{0.8}[1]{$\textstyle=$}\hfil\cr}}%
+    {\ooalign{$\scriptstyle\subset$\cr\hfil\scalebox{0.8}[1]{$\scriptstyle=$}\hfil\cr}}%
+    {\ooalign{$\scriptscriptstyle\subset$\cr\hfil\scalebox{0.8}[1]{$\scriptscriptstyle=$}\hfil\cr}}%
+    }%
+}
+
+\makeatletter
+\newcommand{\realasbuk}[1]{\expandafter\russian@realalph\csname c@#1\endcsname}
+
+\def\russian@realAlph#1{\ifcase#1\or
+   А\or Б\or В\or Г\or Д\or Е\or Ж\or
+   З\or И\or К\or Л\or М\or Н\or О\or
+   П\or Р\or С\or Т\or У\or Ф\or Х\or
+   Ц\or Ч\or Ш\or Щ\or Э\or Ю\or Я\else\xpg@ill@value{#1}{russian@Alph}\fi}
+\def\russian@realalph#1{\ifcase#1\or
+   а\or б\or в\or г\or д\or е\or ж\or
+   з\or и\or к\or л\or м\or н\or о\or
+   п\or р\or с\or т\or у\or ф\or х\or
+   ц\or ч\or ш\or щ\or э\or ю\or я\else\xpg@ill@value{#1}{russian@alph}\fi}
+
+\AddEnumerateCounter{\realasbuk}{\russian@realalph}{щ}
+
+\setlist[itemize]{
+    label=--,
+    noitemsep,
+    labelindent=\parindent,
+    leftmargin=*,
+    wide
+}
+\setlist[enumerate,1]{
+    label=\arabic*),
+    ref = \arabic*),
+    left=\parindent, 
+    wide
+}
+\setlist[enumerate,2]{
+    label=\realasbuk*),
+    ref = \theenumi.\realasbuk*),
+    wide=\dimexpr\parindent+2ex, leftmargin=*    
+}
+
+\makeatother
+
+%%%% ВАЖНО!!!!
+
+\tikzset{
+    declare function={
+        normcdf(\x,\m,\s)=1/(1 + exp(-0.07056*((\x-\m)/\s)^3 - 1.5976*(\x-\m)/\s));
+    }
+}
+\tikzset{
+    declare function={
+        normpdf(\x,\m,\s)= (1/(\s*sqrt(2*pi)))*exp(-0.5*((\x-\m)/\s)^2);
+    }
+}
+
+\makeatletter
+\newcommand\RedeclareMathOperator{%
+  \@ifstar{\def\rmo@s{m}\rmo@redeclare}{\def\rmo@s{o}\rmo@redeclare}%
+}
+% this is taken from \renew@command
+\newcommand\rmo@redeclare[2]{%
+  \begingroup \escapechar\m@ne\xdef\@gtempa{{\string#1}}\endgroup
+  \expandafter\@ifundefined\@gtempa
+     {\@latex@error{\noexpand#1undefined}\@ehc}%
+     \relax
+  \expandafter\rmo@declmathop\rmo@s{#1}{#2}}
+% This is just \@declmathop without \@ifdefinable
+\newcommand\rmo@declmathop[3]{%
+  \DeclareRobustCommand{#2}{\qopname\newmcodes@#1{#3}}%
+}
+\@onlypreamble\RedeclareMathOperator
+\makeatother
+
+%\RedeclareMathOperator{\inf}{\mathbf{inf}}
+%\RedeclareMathOperator{\sup}{\mathbf{sup}}
+
+\setlength{\epigraphwidth}{.75\textwidth}
+\setlength{\epigraphrule}{0pt}
+%\renewcommand{\sourceflush}{flushright}
+
+\DeclareMathOperator{\dom}{\rm dom}
+\DeclareMathOperator{\ran}{\rm ran}
+\RedeclareMathOperator{\Re}{\rm Re}
+\RedeclareMathOperator{\Im}{\rm Im}
